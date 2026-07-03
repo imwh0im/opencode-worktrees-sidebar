@@ -1,0 +1,60 @@
+{
+  "name": "@imwh0im/opencode-worktrees-sidebar",
+  "version": "0.1.0",
+  "description": "An opencode TUI sidebar plugin that shows git worktrees observed in the current session.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.ko.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bunx tsc -p tsconfig.build.json",
+    "typecheck": "bunx tsc --noEmit -p tsconfig.json",
+    "test": "bun test",
+    "validate": "bun run typecheck && bun run test && bun run build",
+    "prepack": "bun run build",
+    "pack:dry-run": "npm pack --dry-run",
+    "publish:dry-run": "npm publish --access public --provenance --dry-run"
+  },
+  "keywords": [
+    "opencode",
+    "tui",
+    "plugin",
+    "git",
+    "worktree"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imwh0im/opencode-worktrees-sidebar.git"
+  },
+  "homepage": "https://github.com/imwh0im/opencode-worktrees-sidebar#readme",
+  "bugs": {
+    "url": "https://github.com/imwh0im/opencode-worktrees-sidebar/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "latest",
+    "@opentui/core": "latest",
+    "@opentui/keymap": "latest",
+    "@opentui/solid": "latest",
+    "solid-js": "latest"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "latest",
+    "typescript": "latest"
+  }
+}
