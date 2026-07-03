@@ -1,5 +1,7 @@
 # opencode-worktrees-sidebar
 
+English | [한국어](README.ko.md)
+
 An opencode TUI sidebar plugin that shows git worktrees observed in the current session.
 
 The plugin adds a `Worktrees` section to the opencode sidebar. It records the current session directory, assistant message paths, and worktree paths mentioned by tool calls, then opens a selected path in your editor.
